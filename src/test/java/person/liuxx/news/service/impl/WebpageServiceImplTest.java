@@ -46,8 +46,9 @@ public class WebpageServiceImplTest
     @Test
     public void test()
     {
-        String url="https://www.taptap.com/top/download";
+        String url="http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html";
         String source = service.getWebpageSource(url).get();
+        log.info("page source:{}",source);
         String p=service.parseHtml(source).orElse("error!");
         log.info("get url:{},parse result：{}",url,p);
     }

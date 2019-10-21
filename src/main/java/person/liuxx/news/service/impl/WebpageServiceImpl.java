@@ -40,7 +40,6 @@ public class WebpageServiceImpl implements WebpageService
         {
             String findString = m.group();
             String classArrayString = findString.substring(7, findString.length() - 1);
-            log.debug("classArrayString:{}", classArrayString);
             Arrays.stream(classArrayString.split(" ")).forEach(n -> addClassNameToMap(n, map));
         }
         log.debug("map:{}", map);
